@@ -6,6 +6,7 @@
         <h1><%  title %></h1>
         <a href="/book-list/add" class="btn btn-primary" role="button"><i class="fas fa-plus-circle"></i>Add a Book</a>
         <br>
+        <br>
         <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover">
                 <thead>
@@ -15,9 +16,9 @@
                         <th class="text-center">Published</th>
                         <th class="text-center">Description</th>
                         <th class="text-center">Price</th>
-                        <th class="text-center">
+                        <th class="text-center">Edit
                         </th>
-                        <th class="text-center">
+                        <th class="text-center">Delete
                         </th>
                     </tr>
                 </thead>
@@ -33,7 +34,7 @@
                             <a href="/book-list/edit/<%= BookList[count]._id %>" class="btn btn-primary btn-sm"><i class="fas fa-pencil alt"></i>Edit</a>
                           </td>
                           <td class="text-center">
-                            <a onclick="DeleteCollection()" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i>Delete</a>
+                            <a onclick="DeleteCollection()" href="/book-list/delete/<%= BookList[count]._id%>" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i>Delete</a>
                           </td>
                           <% } %>
                 </tbody>

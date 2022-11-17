@@ -26,7 +26,6 @@ router.get('/add', (req,res,next) => {
 /* Post Route for processing the Add page - Create Operation */
 router.post('/add', (req,res,next) => {
     let newBook = Book({
-        "_id":req.body._id,
         "name": req.body.name,
         "author": req.body.author,
         "published": req.body.published,
@@ -83,7 +82,7 @@ router.post('/edit/:id', (req,res,next) => {
 router.get('/delete/:name', (req,res,next) => {
     let name = req.params.name;
 
-    Book.remove({name: name}, (err) => {
+    Book.deleteMany({name: name}, (err) => {
         if(err){
             console.log(err);
             res.end(err);
