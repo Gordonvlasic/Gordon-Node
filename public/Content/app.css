@@ -1,6 +1,17 @@
+html{
+    overflow-x: hidden;
+}
+
+
+body{
+    height: 115vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .FooterContainer{
-    position: absolute;
-    bottom: 0;
+
+    margin-top: auto;
     width: 100%;
     background-color: #f5f5f5;
 }
@@ -8,7 +19,7 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    padding-top: 5%;
+    padding-top: 10%;
 }
 .yup{
     display: flex;
@@ -26,4 +37,53 @@
 }
 .col-md-12{
     padding-bottom: 1rem;
+}
+.mb-4{
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+}
+.navbar.navbar-expand-lg.bg-light{
+    position: fixed;
+    width: 100%;
+}
+.socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, .8);
+    width: 5%;
+}
+.Bottomtext{
+
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+.fa-instagram{
+    padding-top: 5px;
+    font-size: 40px;
+    color: white;
+}
+.fa-snapchat{
+    font-size: 40px;
+    color: white;
+}
+.fa-twitter{
+    font-size: 40px;
+    color: white;
+    padding-bottom: 5px;
+}
+a:link { color: black; }
+.topnav-right{
+    float: right;
+}
+
+@media (min-width: 992px){
+.navright {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-right: var(--bs-navbar-nav-link-padding-x);
+    padding-left: var(--bs-navbar-nav-link-padding-x);
+}
 }
