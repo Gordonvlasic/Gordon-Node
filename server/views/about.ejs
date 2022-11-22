@@ -7,24 +7,16 @@
       <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
     </div>
 </div>
-
+<% for(let count = 0; count < BlogList.length; count++) { %>
 <div class="BlogPostsWrapper">
 
   <div class="BlogPost">
-    <h1><%= ContactList[count].name %></h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Amet, eligendi tenetur temporibus omnis, nobis dolorem nulla quisquam fugiat, 
-      provident cumque quo corporis. Quam accusamus delectus veritatis ducimus id qui soluta.</p>
+    <h1><%=BlogList[count].blogheader%></h1>
+    <p><%=BlogList[count].blogpost%></p>
   </div>
 
-  <div class="BlogPost">
-    <h1><%= BlogList[].blogHeader></h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Amet, eligendi tenetur temporibus omnis, nobis dolorem nulla quisquam fugiat, 
-      provident cumque quo corporis. Quam accusamus delectus veritatis ducimus id qui soluta.</p>
-  </div>
     
 
 </div>
-
+<% } %>
   <%- include ('partials/footer') %>

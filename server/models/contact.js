@@ -12,3 +12,4 @@ const contactModel = mongoose.Schema({
 });
 
 module.exports = mongoose.model('Contact', contactModel);
+
