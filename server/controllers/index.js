@@ -7,7 +7,7 @@ let passport = require('passport');
 let userModel = require('../models/user');
 let User = userModel.User; // alias
 
-module.exports.displayHomePage = (req, res, next) => {
+module.exports.displayHomePage = (req, res, next) => { 
     res.render('index', {title: 'Home', displayName: req.user ? req.user.displayName : ''});
 }
 
@@ -76,6 +76,7 @@ module.exports.displayRegisterPage = (req, res, next) => {
         return res.redirect('/');
     }
 }
+
 
 module.exports.processRegisterPage = (req, res, next) => {
     // instantiate a user object

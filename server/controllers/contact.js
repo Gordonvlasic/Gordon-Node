@@ -2,6 +2,11 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 
+
+
+
+
+
 // Create a reference to the model
 let Contact = require('../models/contact');
 
@@ -11,10 +16,11 @@ module.exports.displayContactList = (req, res, next) => {
             return console.error(err);
         } else {
             //console.log(ContactList);
-            res.render('contact/list', {title: 'Contacts', ContactList: contactList, displayName: req.user ? req.user.displayName : ''});
+            res.render('contact/list', {title: 'Contacts',ContactList: contactList, displayName: req.user ? req.user.displayName : ''});
         }
     });
 };
+
 
 module.exports.displayAddPage = (req, res, next) => {
     res.render('contact/add', {title: 'Add Contact', displayName: req.user ? req.user.displayName : ''});
