@@ -10,7 +10,9 @@
     background-color: blue;
     transition: all .2s ease;
 }
-
+.navbar{
+    z-index: 1;
+}
 .nav-link {
 
     letter-spacing: 1px;
@@ -23,7 +25,11 @@
     -webkit-transition: border-color .35s ease, background .35s ease;
     transition: border-color .35s ease, background .35s ease;
 }
-
+.footy{
+    position: fixed;
+    top: 57rem;
+    left: 108rem;
+}
 .nav-link:before {
     background-color: #00FFBE;
     content: "";
