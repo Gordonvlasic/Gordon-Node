@@ -3,16 +3,17 @@
 
 <div class="jumbotron jumbotron-fluid MainJumbotron">
     <div class="container">
-      <h1 class="display-4"><%=title%></h1>
+      <h3 class="display-6"><%=title%></h3>
       <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
     </div>
 </div>
+<hr><br>
 <% for(let count = 0; count < BlogList.length; count++) { %>
   
 <div class="BlogPostsWrapper">
     <div class="jumbotron jumbotron-fluid BlogPost">
       <div class="container">
-        <h1 class="display-4"`><%=BlogList[count].blogheader%></h1>
+        <h3 class="display-6"`><%=BlogList[count].blogheader%></h3>
         <p class="lead"><%=BlogList[count].blogpost%></p>
       </div>
     </div>
