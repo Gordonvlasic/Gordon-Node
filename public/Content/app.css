@@ -26,11 +26,9 @@
     transition: border-color .35s ease, background .35s ease;
 }
 .footy{
-    display: flex;
-    position: relative;
-    top: 10rem;
-    justify-content: flex-end;
-    padding-right: 1rem;
+    position: fixed;
+    top: 56rem;
+    right: 2rem;
 }
 .nav-link:before {
     background-color: #00FFBE;
