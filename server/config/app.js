@@ -16,17 +16,17 @@ const mongoose = require('mongoose');
 const DB = require('./db');
 
 // point mongoose to the DB URI
-mongoose.connect(DB.URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
-const mongoDB = mongoose.connection;
-mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
-mongoDB.once('open', ()=> {
-  console.log('Connected to MongoDB');
-});
+
+// mongoose.connect(DB.URI, {useNewUrlParser: true, useUnifiedTopology: true});
+
+// const mongoDB = mongoose.connection;
+// mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
+// mongoDB.once('open', ()=> {
+//   console.log('Connected to MongoDB');
+// });
 
 const indexRouter = require('../routes/index');
-const usersRouter = require('../routes/users');
-const contactsUser = require('../routes/contact');
 
 const app = express();
 
@@ -56,20 +56,8 @@ app.use(passport.session());
 
 // passport user configuration
 
-// create user model instance
-let userModel = require('../models/user');
-let User = userModel.User; 
-
-// implement user authentication strategy
-passport.use(User.createStrategy());
-
-// serialize and deserialize the user info
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/contact-list', contactsUser);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
